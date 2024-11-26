@@ -14,12 +14,12 @@ def download_model(url):
         return f"Error downloading model: {response.status_code}"
 
 # Download model from Google Drive (replace with your actual link)
-model_download_message = download_model("https://drive.google.com/uc?export=download&id=1-3ruHJ25v1o3_UWQOGFOGArYuxeg6wye")
+model_download_message = download_model("https://drive.google.com/file/d/1-3ruHJ25v1o3_UWQOGFOGArYuxeg6wye/view?usp=sharing")
 st.info(model_download_message)  # Display download status
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model('plant_disease_model.keras')
+    model = tf.keras.models.load_model('1.keras')
     return model
 
 def preprocess_image(image):
