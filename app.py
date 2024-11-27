@@ -21,7 +21,7 @@ def download_model(url, model_name='plant_disease_model.keras'):
         return f"Error downloading model: {response.status_code}"
 
 # Download model from Google Drive (replace with your actual link)
-model_url = "https://drive.google.com/file/d/1-3ruHJ25v1o3_UWQOGFOGArYuxeg6wye/view?usp=sharing"
+model_url = "https://drive.google.com/file/d/1-6W-u-KoyL511t-OVuCQY--YZL93NB6N/view?usp=sharing"
 model_download_message = download_model(model_url)
 st.info(model_download_message)  # Display download status
 
@@ -44,8 +44,8 @@ def preprocess_image(image):
 def main():
     st.title('Plant Disease Classification (Potato)')
 
-    # Display the provided default potato image
-    default_image_url = "https://example.com/default_image.jpg"  # Replace with your image URL
+    # Display the provided default potato leaf image
+    default_image_url = "https://png.pngtree.com/png-vector/20230912/ourmid/pngtree-illustration-of-a-simple-leaf-png-image_10027828.png"
     st.image(default_image_url, caption='Example Leaf Image', use_column_width=True)
 
     uploaded_file = st.file_uploader("Choose a potato leaf image", type=["jpg", "jpeg", "png"])
